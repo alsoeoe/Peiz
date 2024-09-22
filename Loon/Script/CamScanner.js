@@ -1,7 +1,4 @@
-var chxm1023 = JSON.parse($response.body);
-const vipa = "/purchase/cs/query_property";
-const vipb = "/queryProperty";
-const tqzx = "/getPrivilegeItem";
+var responseBody = JSON.parse($response.body);
 const vip = {
   group1_paid: 1,
   ms_first_pay: 0,
@@ -36,137 +33,67 @@ const vip = {
   inherited_flag: 0,
   group2_paid: 0,
 };
-if ($request.url.indexOf(vipa) != -1) {
-  chxm1023.data["psnl_vip_property"] = vip;
-  chxm1023.data["fax_balance"] = "99999";
-  chxm1023.data["used_points"] = "99999";
-  chxm1023.data["points"] = "99999";
-  chxm1023.data["pdfword_balance"] = "100010";
-  chxm1023.data["bookmode_balance"] = 100010;
-  chxm1023.data["immt_expy_points"] = "99999";
-  chxm1023.data["ocr_balance"] = 99999;
-  chxm1023.data["no_login_ocr_balance"] = "99999";
-  chxm1023.data["CamScanner_RoadMap"] = 100000;
+
+const updateData = (data) => {
+  data["psnl_vip_property"] = vip;
+  data["fax_balance"] = "99999";
+  data["used_points"] = "99999";
+  data["points"] = "99999";
+  data["pdfword_balance"] = "100010";
+  data["bookmode_balance"] = 100010;
+  data["immt_expy_points"] = "99999";
+  data["ocr_balance"] = 99999;
+  data["no_login_ocr_balance"] = "99999";
+  data["CamScanner_RoadMap"] = 100000;
+};
+
+if ($request.url.indexOf("/purchase/cs/query_property") != -1) {
+  updateData(responseBody.data);
 }
-if ($request.url.indexOf(vipb) != -1) {
-  chxm1023.data.ar_property["psnl_vip_property"] = vip;
+
+if ($request.url.indexOf("/queryProperty") != -1) {
+  responseBody.data.ar_property["psnl_vip_property"] = vip;
 }
-if ($request.url.indexOf(tqzx) != -1) {
-  chxm1023.data.data = {
+
+if ($request.url.indexOf("/getPrivilegeItem") != -1) {
+  responseBody.data.data = {
     document: [
-      {
-        balance: -1,
-        item: "CamScanner_Pic2pdf",
-      },
-      {
-        balance: -1,
-        item: "CamScanner_PdfCompress",
-      },
-      {
-        balance: -1,
-        item: "CamScanner_PdfEncrypt",
-      },
-      {
-        balance: -1,
-        item: "CamScanner_FileMerge",
-      },
-      {
-        balance: -1,
-        item: "CamScanner_PdfExtract",
-      },
-      {
-        balance: -1,
-        item: "CamScanner_PdfWatermark",
-      },
-      {
-        balance: -1,
-        item: "CamScanner_PdfSign",
-      },
-      {
-        balance: 99999,
-        item: "CamScanner_Intellect_Erase",
-      },
+      { balance: -1, item: "CamScanner_Pic2pdf" },
+      { balance: -1, item: "CamScanner_PdfCompress" },
+      { balance: -1, item: "CamScanner_PdfEncrypt" },
+      { balance: -1, item: "CamScanner_FileMerge" },
+      { balance: -1, item: "CamScanner_PdfExtract" },
+      { balance: -1, item: "CamScanner_PdfWatermark" },
+      { balance: -1, item: "CamScanner_PdfSign" },
+      { balance: 99999, item: "CamScanner_Intellect_Erase" },
     ],
     transfer: [
-      {
-        balance: -1,
-        item: "CamScanner_ExcelRecoginze",
-      },
-      {
-        balance: -1,
-        item: "CamScanner_RoadMap",
-      },
-      {
-        balance: -1,
-        item: "CamScanner_Pdf2ppt",
-      },
-      {
-        balance: 99999,
-        item: "CamScanner_CloudOCR",
-      },
+      { balance: -1, item: "CamScanner_ExcelRecoginze" },
+      { balance: -1, item: "CamScanner_RoadMap" },
+      { balance: -1, item: "CamScanner_Pdf2ppt" },
+      { balance: 99999, item: "CamScanner_CloudOCR" },
     ],
     other: [
-      {
-        balance: 99999,
-        item: "CamScanner_Translation",
-      },
-      {
-        balance: -1,
-        item: "CamScanner_DirNum",
-      },
-      {
-        balance: -1,
-        item: "CamScanner_IP_REMOVEAD",
-      },
-      {
-        balance: -1,
-        item: "CamScanner_PingTu",
-      },
-      {
-        balance: 99999,
-        item: "CamScanner_Points",
-      },
-      {
-        balance: 99999,
-        item: "CamScanner_Fax_Balance",
-      },
+      { balance: 99999, item: "CamScanner_Translation" },
+      { balance: -1, item: "CamScanner_DirNum" },
+      { balance: -1, item: "CamScanner_IP_REMOVEAD" },
+      { balance: -1, item: "CamScanner_PingTu" },
+      { balance: 99999, item: "CamScanner_Points" },
+      { balance: 99999, item: "CamScanner_Fax_Balance" },
     ],
     scaner: [
-      {
-        balance: 99999,
-        item: "CamScanner_ImageRestore",
-      },
-      {
-        balance: -1,
-        item: "CamScanner_Patting",
-      },
-      {
-        balance: 99999,
-        item: "CamScanner_Profile_Card_Format",
-      },
-      {
-        balance: -1,
-        item: "CamScanner_BookMode",
-      },
-      {
-        balance: -1,
-        item: "CamScanner_CertMode",
-      },
-      {
-        balance: -1,
-        item: "CamScanner_HDScan",
-      },
-      {
-        balance: 99999,
-        item: "CamScanner_CloudOCR",
-      },
+      { balance: 99999, item: "CamScanner_ImageRestore" },
+      { balance: -1, item: "CamScanner_Patting" },
+      { balance: 99999, item: "CamScanner_Profile_Card_Format" },
+      { balance: -1, item: "CamScanner_BookMode" },
+      { balance: -1, item: "CamScanner_CertMode" },
+      { balance: -1, item: "CamScanner_HDScan" },
+      { balance: 99999, item: "CamScanner_CloudOCR" },
     ],
     pure: [
-      {
-        balance: -1,
-        item: "CamScanner_IP_REMOVEAD",
-      },
+      { balance: -1, item: "CamScanner_IP_REMOVEAD" },
     ],
   };
 }
-$done({ body: JSON.stringify(chxm1023) });
+
+$done({ body: JSON.stringify(responseBody) });
