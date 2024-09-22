@@ -1,11 +1,11 @@
 #!name=字由会员解锁
 
 [Script]
-http-response ^https?:\/\/hellofontserver001.etrump.net\/font\/queryUserMembershipStatus script-path=./Scripts/Hellofont/hellofont1.js, requires-body=true, tag=字由解锁验证1
+http-response ^https?:\/\/hellofontserver001.etrump.net\/font\/queryUserMembershipStatus script-path=https://raw.githubusercontent.com/alsoeoe/Peiz/main/Loon/Script/Hellofont/Hellofont1.js, requires-body=true, tag=字由解锁验证1
 
-http-response ^https?:\/\/back3.hellofont.cn\/MembershipManagement\/api\/Membership\/MembershipInfo script-path=./Scripts/Hellofont/hellofont2.js, requires-body=true, tag=字由个人信息2
+http-response ^https?:\/\/back3.hellofont.cn\/MembershipManagement\/api\/Membership\/MembershipInfo script-path=https://raw.githubusercontent.com/alsoeoe/Peiz/main/Loon/Script/Hellofont/Hellofont2.js, requires-body=true, tag=字由个人信息2
 
-http-response ^https?:\/\/hellofontserver001.etrump.net\/home_api\/user\/get_membership_info\?userGuid=[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12} script-path=./Scripts/Hellofont/hellofont3.js, requires-body=true, tag=字由个人信息3
+http-response ^https?:\/\/hellofontserver001.etrump.net\/home_api\/user\/get_membership_info\?userGuid=[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12} script-path=https://raw.githubusercontent.com/alsoeoe/Peiz/main/Loon/Script/Hellofont/Hellofont3.js, requires-body=true, tag=字由个人信息3
 
 [MITM]
 hostname = hellofontserver001.etrump.net, back3.hellofont.cn
