@@ -1,6 +1,7 @@
-#!name=扫描全能王会员
-#!desc=local
-#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1058.png
+#!name = 扫描全能王会员
+#!desc = 解锁订阅会员，非一次性
+#!tag = 解锁会员
+#!icon = https://raw.githubusercontent.com/alsoeoe/Peiz/main/Icon/App_icon/CamScanner.png
 
 [Script]
 http-response ^https:\/\/.*\.(intsig\.net|camscanner\.com) script-path=https://raw.githubusercontent.com/alsoeoe/Peiz/main/Loon/Script/CamScanner.js, requires-body=true, timeout=60, tag=CamScanner

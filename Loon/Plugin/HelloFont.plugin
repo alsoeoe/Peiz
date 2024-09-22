@@ -1,4 +1,7 @@
-#!name=字由会员解锁
+#!name = 字由会员解锁
+#!desc = 解锁字由会员
+#!tag = 解锁会员
+#!icon = https://raw.githubusercontent.com/alsoeoe/Peiz/main/Icon/App_icon/HelloFont.png
 
 [Script]
 http-response ^https?:\/\/hellofontserver001.etrump.net\/font\/queryUserMembershipStatus script-path=https://raw.githubusercontent.com/alsoeoe/Peiz/main/Loon/Script/Hellofont/Hellofont1.js, requires-body=true, tag=字由解锁验证1
