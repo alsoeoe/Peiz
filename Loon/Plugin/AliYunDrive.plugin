@@ -1,5 +1,6 @@
-#!name= 阿里云盘签到
-#!desc= 阿里云盘签到脚本
+#!name = 阿里云盘签到
+#!desc = 阿里云盘签到脚本
+#!tag = 签到任务
 #!icon =https://raw.githubusercontent.com/alsoeoe/Peiz/main/Icon/App_icon/ALYP.png
 
 [Script]

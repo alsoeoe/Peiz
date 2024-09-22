@@ -1,0 +1,11 @@
+#!name = Raycast PRO
+#!desc = 解锁订阅会员
+#!icon= https://raw.githubusercontent.com/alsoeoe/Peiz/main/Icon/App_icon/Raycast.png
+
+[Script]
+http-response ^https?:\/\/backend\.raycast\.com\/api\/v1\/me script-path=https://raw.githubusercontent.com/alsoeoe/Peiz/main/Loon/Script/Raycast/Raycast_Activate.js, requires-body=true, timeout=60, tag=RaycastActivate
+
+http-response ^https?:\/\/backend\.raycast\.com\/api\/v1\/me\/trial_status script-path=https://raw.githubusercontent.com/alsoeoe/Peiz/main/Loon/Script/Raycast/Raycast_Custom.js, requires-body=true, timeout=60, tag=RaycastCustom
+
+[MITM]
+hostname = backend.raycast.com
