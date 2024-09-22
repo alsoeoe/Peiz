@@ -1,4 +1,4 @@
-var responseBody = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 const vipa = "/purchase/cs/query_property";
 const vipb = "/queryProperty";
 const tqzx = "/getPrivilegeItem";
@@ -169,4 +169,4 @@ if ($request.url.indexOf(tqzx) != -1) {
     ],
   };
 }
-$done({ body: JSON.stringify(responseBody) });
+$done({ body: JSON.stringify(chxm1023) });
