@@ -26,7 +26,8 @@ function modifyResponseBody(body) {
     const UAMappings = {
         // 谜底时钟
         // https://apps.apple.com/cn/app/id1536358464
-        "%E8%B0%9C%E5%BA%95%E6%97%B6%E9%92%9F": {
+       // "%E8%B0%9C%E5%BA%95%E6%97%B6%E9%92%9F": {
+                "MDClock": {
             name: "Entitlement.Pro",
             id: "tech.miidii.MDClock.subscription.year.v1",
         },
