@@ -32,13 +32,6 @@ function modifyResponseBody(body) {
             id: "tech.miidii.MDClock.subscription.year.v1",
         },
 
-        // 谜底黑胶
-        // https://apps.apple.com/cn/app/id1606306441
-        "%E8%B0%9C%E5%BA%95%E9%BB%91%E8%83%B6": {
-            name: "Entitlement.Pro",
-            id: "tech.miidii.MDClock.subscription.year.v1",
-        },
-
         // MoneyThings
         // https://apps.apple.com/cn/app/id1549694221
         MoneyThings: {
@@ -63,20 +56,6 @@ function modifyResponseBody(body) {
         // Spark邮箱
         // https://apps.apple.com/cn/app/id997102246
         Spark: {name: "premium", id: "spark_5999_1y_1w0"},
-
-        // 性爱游戏
-        // https://apps.apple.com/cn/app/id1133512669
-        Sex: {
-            name: "Premium Plus",
-            id: "ru.sexactions.subscriptionPromo1",
-        },
-
-        // Cookie记账
-        // https://apps.apple.com/cn/app/id1559943673
-        cookie: {
-            name: "allaccess",
-            id: "app.ft.Bookkeeping.lifetime",
-        },
 
         // Moze
         // https://apps.apple.com/cn/app/id1460011387
@@ -112,6 +91,21 @@ function modifyResponseBody(body) {
             name: "Entitlement.Pro",
             id: "tech.miidii.MDClock.subscription.year.v1",
         },
+
+        // Yosum: 订阅管理
+        // https://apps.apple.com/cn/app/id6451242119
+        yosum:{
+            name: "Premium",
+            id: "yosum_999_1year",
+        },
+
+        // TouchRetouch
+        // https://apps.apple.com/cn/app/id373311252
+        TouchRetouchBasic:{
+            name: "premium",
+            id: "tr5_yearlysubsc_15dlrs_2",
+        },
+
     };
 
     const subscriptionData = {
